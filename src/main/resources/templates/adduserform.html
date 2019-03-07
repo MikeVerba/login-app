@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Add User Form</title>
+</head>
+<body>
+    <div align="center" id="userform">
+        <h3>Dodawanie użytkownika</h3><br>
+        <p>Podaj dane użytkownika</p><br>
+        <form action="#" th:action="@{/adduserform}" th:object="${user}" class="form" method="post">
+            <input type="text" th:field="*{name}" required placeholder="Podaj swoje imie"><br>
+            <input type="text" th:field="*{lastname}" required placeholder="Podaj swoje nazwisko"><br>
+            <input type="text" th:field="*{email}" required placeholder="Podaj swój email"><br>
+            <input type="password" th:field="*{password}" required placeholder="Podaj hasło"><br>
+            <input type="submit" name="" value="Dodaj użytkownika">
+        </form>
+    </div>
+
+</body>
+</html>
